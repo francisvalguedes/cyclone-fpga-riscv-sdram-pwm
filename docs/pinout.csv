@@ -1,0 +1,132 @@
+Categoria,Função / Periférico,Nome no Net,Pino FPGA,Direção / Observação,Pino Quartus
+Clock & Básico,Clock Principal (50 MHz),CLK,E1,Entrada,PIN_E1
+LEDs,LED 0,LED0,E10,Saída,PIN_E10
+LEDs,LED 1,LED1,F9,Saída,PIN_F9
+LEDs,LED 2,LED2,C9,Saída,PIN_C9
+LEDs,LED 3,LED3,D9,Saída,PIN_D9
+LEDs,LED 4,LED4,K2,Saída,PIN_K2
+LEDs,LED 5,LED5,L1,Saída,PIN_L1
+LEDs,LED 6,LED6,L2,Saída,PIN_L2
+Botões (Keys),Botão 1,KEY1,M16,Entrada,PIN_M16
+Botões (Keys),Botão 2,KEY2,M15,Entrada,PIN_M15
+Botões (Keys),Botão 3,KEY3,N16,Entrada,PIN_N16
+Botões (Keys),Botão 4,KEY4,N15,Entrada,PIN_N15
+Botões (Keys),Botão 5,KEY5,P16,Entrada,PIN_P16
+Botões (Keys),Botão 6,KEY6,P15,Entrada,PIN_P15
+Botões (Keys),Botão 7,KEY7,R16,Entrada,PIN_R16
+Botões (Keys),Botão 8,KEY8,T15,Entrada,PIN_T15
+Comunicação Serial,Recepção (RX),RXD,M2,Entrada,PIN_M2
+Comunicação Serial,Transmissão (TX),TXD,N1,Saída,PIN_N1
+EEPROM I2C,Clock I2C,SCL,D1,Saída (Master),PIN_D1
+EEPROM I2C,Dados I2C,SDA,E6,Bidirecional,PIN_E6
+Cartão SD,Chip Select,SD_NCS,D11,Saída,PIN_D11
+Cartão SD,Clock SPI,SD_CLK,D12,Saída,PIN_D12
+Cartão SD,MOSI (Data In),SD_DIN,F10,Saída,PIN_F10
+Cartão SD,MISO (Data Out),SD_DOUT,E15,Entrada,PIN_E15
+SDRAM,Clock,S_CLK,B14,Memória Bidirecional,PIN_B14
+SDRAM,Clock Enable,S_CKE,F16,Memória Bidirecional,PIN_F16
+SDRAM,Chip Select,S_NCS,K10,Memória Bidirecional,PIN_K10
+SDRAM,Row Address Strobe,S_NRAS,K11,Memória Bidirecional,PIN_K11
+SDRAM,Column Address Strobe,S_NCAS,J12,Memória Bidirecional,PIN_J12
+SDRAM,Write Enable,S_NWE,J13,Memória Bidirecional,PIN_J13
+SDRAM,Bank Address 0,S_BA0,G11,Memória Bidirecional,PIN_G11
+SDRAM,Bank Address 1,S_BA1,F13,Memória Bidirecional,PIN_F13
+SDRAM,Address 0,S_A0,F11,Memória Bidirecional,PIN_F11
+SDRAM,Address 1,S_A1,E11,Memória Bidirecional,PIN_E11
+SDRAM,Address 2,S_A2,D14,Memória Bidirecional,PIN_D14
+SDRAM,Address 3,S_A3,C14,Memória Bidirecional,PIN_C14
+SDRAM,Address 4,S_A4,A14,Memória Bidirecional,PIN_A14
+SDRAM,Address 5,S_A5,A15,Memória Bidirecional,PIN_A15
+SDRAM,Address 6,S_A6,B16,Memória Bidirecional,PIN_B16
+SDRAM,Address 7,S_A7,C15,Memória Bidirecional,PIN_C15
+SDRAM,Address 8,S_A8,C16,Memória Bidirecional,PIN_C16
+SDRAM,Address 9,S_A9,D15,Memória Bidirecional,PIN_D15
+SDRAM,Address 10,S_A10,F14,Memória Bidirecional,PIN_F14
+SDRAM,Address 11,S_A11,D16,Memória Bidirecional,PIN_D16
+SDRAM,Address 12,S_A12,F15,Memória Bidirecional,PIN_F15
+SDRAM,Data 0,S_DB0,P14,Memória Bidirecional,PIN_P14
+SDRAM,Data 1,S_DB1,M12,Memória Bidirecional,PIN_M12
+SDRAM,Data 2,S_DB2,N14,Memória Bidirecional,PIN_N14
+SDRAM,Data 3,S_DB3,L12,Memória Bidirecional,PIN_L12
+SDRAM,Data 4,S_DB4,L13,Memória Bidirecional,PIN_L13
+SDRAM,Data 5,S_DB5,L14,Memória Bidirecional,PIN_L14
+SDRAM,Data 6,S_DB6,L11,Memória Bidirecional,PIN_L11
+SDRAM,Data 7,S_DB7,K12,Memória Bidirecional,PIN_K12
+SDRAM,Data 8,S_DB8,G16,Memória Bidirecional,PIN_G16
+SDRAM,Data 9,S_DB9,J11,Memória Bidirecional,PIN_J11
+SDRAM,Data 10,S_DB10,J16,Memória Bidirecional,PIN_J16
+SDRAM,Data 11,S_DB11,J15,Memória Bidirecional,PIN_J15
+SDRAM,Data 12,S_DB12,K16,Memória Bidirecional,PIN_K16
+SDRAM,Data 13,S_DB13,K15,Memória Bidirecional,PIN_K15
+SDRAM,Data 14,S_DB14,L16,Memória Bidirecional,PIN_L16
+SDRAM,Data 15,S_DB15,L15,Memória Bidirecional,PIN_L15
+SDRAM,Data Mask 0 (Low),S_DQM0,J14,Memória Bidirecional,PIN_J14
+SDRAM,Data Mask 1 (High),S_DQM1,G15,Memória Bidirecional,PIN_G15
+Expansão 1 (J1),I/O 1,EX1_IO1,T14,Bidirecional,PIN_T14
+Expansão 1 (J1),I/O 2,EX1_IO2,R13,Bidirecional,PIN_R13
+Expansão 1 (J1),I/O 3,EX1_IO3,T13,Bidirecional,PIN_T13
+Expansão 1 (J1),I/O 4,EX1_IO4,R12,Bidirecional,PIN_R12
+Expansão 1 (J1),I/O 5,EX1_IO5,T12,Bidirecional,PIN_T12
+Expansão 1 (J1),I/O 6,EX1_IO6,R11,Bidirecional,PIN_R11
+Expansão 1 (J1),I/O 7,EX1_IO7,T11,Bidirecional,PIN_T11
+Expansão 1 (J1),I/O 8,EX1_IO8,R10,Bidirecional,PIN_R10
+Expansão 1 (J1),I/O 9,EX1_IO9,T10,Bidirecional,PIN_T10
+Expansão 1 (J1),I/O 10,EX1_IO10,R9,Bidirecional,PIN_R9
+Expansão 1 (J1),I/O 11,EX1_IO11,T9,Bidirecional,PIN_T9
+Expansão 1 (J1),I/O 12,EX1_IO12,R8,Bidirecional,PIN_R8
+Expansão 1 (J1),I/O 13,EX1_IO13,T8,Bidirecional,PIN_T8
+Expansão 1 (J1),I/O 14,EX1_IO14,R7,Bidirecional,PIN_R7
+Expansão 1 (J1),I/O 15,EX1_IO15,T7,Bidirecional,PIN_T7
+Expansão 1 (J1),I/O 16,EX1_IO16,R6,Bidirecional,PIN_R6
+Expansão 1 (J1),I/O 17,EX1_IO17,T6,Bidirecional,PIN_T6
+Expansão 1 (J1),I/O 18,EX1_IO18,R5,Bidirecional,PIN_R5
+Expansão 1 (J1),I/O 19,EX1_IO19,T5,Bidirecional,PIN_T5
+Expansão 1 (J1),I/O 20,EX1_IO20,R4,Bidirecional,PIN_R4
+Expansão 1 (J1),I/O 21,EX1_IO21,T4,Bidirecional,PIN_T4
+Expansão 1 (J1),I/O 22,EX1_IO22,R3,Bidirecional,PIN_R3
+Expansão 1 (J1),I/O 23,EX1_IO23,T3,Bidirecional,PIN_T3
+Expansão 1 (J1),I/O 24,EX1_IO24,P3,Bidirecional,PIN_P3
+Expansão 1 (J1),I/O 25,EX1_IO25,T2,Bidirecional,PIN_T2
+Expansão 1 (J1),I/O 26,EX1_IO26,M9,Bidirecional,PIN_M9
+Expansão 1 (J1),I/O 27,EX1_IO27,L10,Bidirecional,PIN_L10
+Expansão 1 (J1),I/O 28,EX1_IO28,L9,Bidirecional,PIN_L9
+Expansão 1 (J1),I/O 29,EX1_IO29,K9,Bidirecional,PIN_K9
+Expansão 1 (J1),I/O 30,EX1_IO30,P8,Bidirecional,PIN_P8
+Expansão 1 (J1),I/O 31,EX1_IO31,R1,Bidirecional,PIN_R1
+Expansão 1 (J1),I/O 32,EX1_IO32,P2,Bidirecional,PIN_P2
+Expansão 1 (J1),I/O 33,EX1_IO33,P1,Bidirecional,PIN_P1
+Expansão 1 (J1),I/O 34,EX1_IO34,N2,Bidirecional,PIN_N2
+Expansão 2 (J2),I/O 1,EX2_IO1,C2,Bidirecional,PIN_C2
+Expansão 2 (J2),I/O 2,EX2_IO2,B1,Bidirecional,PIN_B1
+Expansão 2 (J2),I/O 3,EX2_IO3,A2,Bidirecional,PIN_A2
+Expansão 2 (J2),I/O 4,EX2_IO4,B3,Bidirecional,PIN_B3
+Expansão 2 (J2),I/O 5,EX2_IO5,A3,Bidirecional,PIN_A3
+Expansão 2 (J2),I/O 6,EX2_IO6,B4,Bidirecional,PIN_B4
+Expansão 2 (J2),I/O 7,EX2_IO7,A4,Bidirecional,PIN_A4
+Expansão 2 (J2),I/O 8,EX2_IO8,B5,Bidirecional,PIN_B5
+Expansão 2 (J2),I/O 9,EX2_IO9,A5,Bidirecional,PIN_A5
+Expansão 2 (J2),I/O 10,EX2_IO10,B6,Bidirecional,PIN_B6
+Expansão 2 (J2),I/O 11,EX2_IO11,A6,Bidirecional,PIN_A6
+Expansão 2 (J2),I/O 12,EX2_IO12,B7,Bidirecional,PIN_B7
+Expansão 2 (J2),I/O 13,EX2_IO13,A7,Bidirecional,PIN_A7
+Expansão 2 (J2),I/O 14,EX2_IO14,B8,Bidirecional,PIN_B8
+Expansão 2 (J2),I/O 15,EX2_IO15,A8,Bidirecional,PIN_A8
+Expansão 2 (J2),I/O 16,EX2_IO16,B9,Bidirecional,PIN_B9
+Expansão 2 (J2),I/O 17,EX2_IO17,A9,Bidirecional,PIN_A9
+Expansão 2 (J2),I/O 18,EX2_IO18,B10,Bidirecional,PIN_B10
+Expansão 2 (J2),I/O 19,EX2_IO19,A10,Bidirecional,PIN_A10
+Expansão 2 (J2),I/O 20,EX2_IO20,B11,Bidirecional,PIN_B11
+Expansão 2 (J2),I/O 21,EX2_IO21,A11,Bidirecional,PIN_A11
+Expansão 2 (J2),I/O 22,EX2_IO22,B12,Bidirecional,PIN_B12
+Expansão 2 (J2),I/O 23,EX2_IO23,A12,Bidirecional,PIN_A12
+Expansão 2 (J2),I/O 24,EX2_IO24,B13,Bidirecional,PIN_B13
+Expansão 2 (J2),I/O 25,EX2_IO25,A13,Bidirecional,PIN_A13
+Expansão 2 (J2),I/O 26,EX2_IO26,D5,Bidirecional,PIN_D5
+Expansão 2 (J2),I/O 27,EX2_IO27,D6,Bidirecional,PIN_D6
+Expansão 2 (J2),I/O 28,EX2_IO28,C6,Bidirecional,PIN_C6
+Expansão 2 (J2),I/O 29,EX2_IO29,E7,Bidirecional,PIN_E7
+Expansão 2 (J2),I/O 30,EX2_IO30,F8,Bidirecional,PIN_F8
+Expansão 2 (J2),I/O 31,EX2_IO31,C8,Bidirecional,PIN_C8
+Expansão 2 (J2),I/O 32,EX2_IO32,D8,Bidirecional,PIN_D8
+Expansão 2 (J2),I/O 33,EX2_IO33,E8,Bidirecional,PIN_E8
+Expansão 2 (J2),I/O 34,EX2_IO34,E9,Bidirecional,PIN_E9

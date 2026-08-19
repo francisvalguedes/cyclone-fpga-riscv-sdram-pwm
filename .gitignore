@@ -1,0 +1,56 @@
+# Quartus Prime build databases and outputs
+db/
+incremental_db/
+output_files/
+build/
+
+# Nios V BSP (gerado por niosv-bsp a partir do sistema Platform Designer --
+# rode niosv-bsp create-settings/generate antes de compilar o software)
+software/bootloader_bsp/
+software/bsp/
+bkp/
+
+# Quartus workspace, caches, and lock files
+*.qws
+*.bak
+*.rpt
+*.summary
+*.smsg
+*.qmsg
+*.lock
+*.flock
+
+# Simulation and waveform artifacts
+simulation/
+*.vcd
+*.wlf
+*.vwf
+
+# Nios V / Platform Designer generated reports and metadata
+niosV_ip/*_generation*.rpt
+niosV_ip/*.html
+niosV_ip/*.cmp
+niosV_ip/*.bsf
+niosV_ip/*.xml
+niosV_ip/*.debuginfo
+niosV_ip/*.regmap
+
+# Python virtualenv and bytecode cache
+.venv/
+__pycache__/
+*.pyc
+
+# Configuracoes locais do Claude Code (nao devem ser compartilhadas)
+.claude/settings.local.json
+
+# VS Code: launch.json/settings.json deste projeto tem caminhos absolutos
+# especificos desta maquina (instalacao do Quartus, pasta do clone) -- nao
+# fazem sentido em outra maquina.
+.vscode/
+
+# Estado de sessao do editor do Platform Designer (categoria expandida na
+# biblioteca de componentes, tamanho/posicao da janela, layout visual do
+# diagrama de blocos) -- nao e a definicao do hardware, que fica no
+# niosV_ip.qsys (esse continua versionado).
+.qsys_edit/
+
