@@ -64,7 +64,8 @@ via JTAG -- não é algo que se atualiza em campo pela serial.
 
 ### SDRAM (`new_sdram_controller_0`, 32 MB)
 
-Onde a **aplicação** (`software/app`) é copiada para rodar, e também serve
+Onde a **aplicação** (`software/app`) é copiada para rodar, pode ser carregada
+diretamente pelo JTAG no Quartus. No sistema de inicialização independente também serve
 de área de *staging* para uma imagem `.nvbi` recebida pela UART antes de
 ser gravada na flash. Como é volátil, o bootloader precisa copiar a
 aplicação da flash para cá em todo boot.
@@ -96,6 +97,64 @@ Dois chips suportados hoje:
 Memória SPI Flash de configuração do hardware do FPGA e bootloader,
 **não faz parte do hardware gerado** e não aparece no `system.h` de
 nenhum BSP. É gravada apenas via JTAG, no arquivo `.jic`.
+
+## Módulo PWM  customizado (`avalon_pwm`)
+
+IP core VHDL próprio, [pwm/avalon_pwm.vhd](pwm/avalon_pwm.vhd), integrado ao
+sistema Nios V como periférico Avalon-MM Slave (`pwm_0`, endereço no mapa de
+memória em `system.h` do BSP). Permite ajustar em tempo de execução, via
+software, o pré-escalonador, período, duty cycle e polaridade da saída PWM.
+
+### Barramento Avalon-MM
+
+Avalon Memory-Mapped é a interface padrão de interconexão usada pelo
+Platform Designer/Qsys para ligar o núcleo Nios V aos periféricos (UART,
+SPI, PIO, PWM etc.) -- cada periférico expõe um pequeno conjunto de sinais
+(`address`, `read`/`write`, `readdata`/`writedata`) e é acessado pela CPU
+como se fosse uma posição de memória comum. Neste módulo, a interface
+Avalon-MM Slave expõe 4 registradores de 32 bits, endereçados por
+`avs_address` (2 bits):
+
+| Endereço | Registrador | Função |
+|---|---|---|
+| `0x00` | `ctrl` | Bit 0 = habilita o PWM; bit 1 = inverte a polaridade da saída |
+| `0x04` | `divider` | Pré-escalonador do clock (tick a cada `divider+1` ciclos de `clk`) |
+| `0x08` | `period` | Período do contador principal, em "ticks" do pré-escalonador |
+| `0x0C` | `duty` | Duração em nível alto, em "ticks" do pré-escalonador |
+
+### Testbench
+
+Testbench autoverificável em VHDL-2008,
+[pwm/sim/tb_avalon_pwm.vhd](pwm/sim/tb_avalon_pwm.vhd), que modela o
+barramento Avalon-MM (escreve/lê os 4 registradores) e mede a forma de onda
+de `pwm_out` para validar prescaler, período, duty cycle, polaridade e os
+casos extremos (`duty=0`, `duty>periodo`, desabilitar em runtime). Roda no
+**Questa Intel FPGA Starter Edition**, já embutido no Quartus Prime Lite/Std
+(pasta `questa_fse` dentro da instalação do Quartus).
+
+Para rodar, via GUI:
+
+1. Abra `vsim.exe` (dentro de `questa_fse/win64/`).
+2. `File -> Change Directory` -> aponte para `pwm/sim`.
+3. No console do Questa: `do sim_questa.do` -- compila o DUT + testbench,
+   roda a simulação inteira e abre as ondas (sinais do barramento, `pwm_out`
+   e registradores internos do DUT).
+
+Ou por linha de comando (PowerShell), sem abrir a GUI:
+
+```powershell
+$env:PATH = "<caminho do questa_fse>\win64;" + $env:PATH
+cd pwm\sim
+vlib work
+vmap work work
+vcom -2008 -work work ../avalon_pwm.vhd
+vcom -2008 -work work tb_avalon_pwm.vhd
+vsim -c -do "run -all; quit -f" work.tb_avalon_pwm
+```
+
+O resultado de cada caso de teste aparece no console (`OK:`/`FALHA:`), com um
+resumo final indicando quantos testes passaram. Os artefatos gerados pelo
+Questa (`work/`, `modelsim.ini`, `transcript`) já estão no `.gitignore`.
 
 ## Estrutura do software
 
