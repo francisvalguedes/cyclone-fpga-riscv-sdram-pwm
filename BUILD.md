@@ -65,6 +65,11 @@ cmake --fresh -B software/bootloader/build -S software/bootloader -G "Ninja"
 cmake --build software/bootloader/build
 ```
 
+```
+cmake --fresh -B software/app/build -S software/app -G "Ninja"
+cmake --build software/app/build
+```
+
 Compilação otimizada para tamanho (`MinSizeRel`):
 
 ```
