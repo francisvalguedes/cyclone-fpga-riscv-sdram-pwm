@@ -26,6 +26,16 @@ simulation/
 *.wlf
 *.vwf
 
+# Questa/ModelSim: biblioteca de trabalho e artefatos de compilacao/simulacao
+# gerados por vlib/vcom/vsim (recriados a cada rodada, nao devem ser versionados)
+work/
+modelsim.ini
+transcript
+csrc/
+*.vstf
+vsim_stacktrace.vstf
+*.dbg
+
 # Nios V / Platform Designer generated reports and metadata
 niosV_ip/*_generation*.rpt
 niosV_ip/*.html
